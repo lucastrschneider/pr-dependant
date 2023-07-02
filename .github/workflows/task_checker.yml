@@ -5,7 +5,13 @@ on:
 
 jobs:
   task-check:
+    permissions:
+      checks: write
+      issues: read
+      pull-requests: read
+
     runs-on: ubuntu-latest
+    
     steps:
       - uses: kentaro-m/task-completed-checker-action@v0.1.2
         with:
