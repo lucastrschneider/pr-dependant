@@ -3,13 +3,10 @@ on:
   pull_request:
     types: [opened, edited]
 
+permissions: write-all
+
 jobs:
   task-check:
-    permissions:
-      issues: read
-      pull-requests: read
-      checks: write
-      statuses: write
 
     runs-on: ubuntu-latest
     
