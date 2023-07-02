@@ -3,10 +3,12 @@ on:
   pull_request:
     types: [opened, edited]
 
-permissions: write-all
-
 jobs:
   task-check:
+    permissions:
+      checks: write
+      issues: read
+      pull-requests: read
     runs-on: ubuntu-latest
     steps:
       - uses: chromaui/task-completed-checker-action@main
