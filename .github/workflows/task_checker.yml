@@ -6,9 +6,10 @@ on:
 jobs:
   task-check:
     permissions:
-      checks: write
       issues: read
       pull-requests: read
+      checks: write
+      statuses: write
 
     runs-on: ubuntu-latest
     
